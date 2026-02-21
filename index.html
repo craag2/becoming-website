@@ -3,8 +3,87 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Becoming — Affirmation + Reflection</title>
-  <meta name="description" content="A daily space to affirm, reflect, and choose who you're becoming. Personalized affirmations, journaling, and mindful reflection." />
+  <title>Becoming — Daily Affirmation + Reflection App</title>
+  <meta name="description" content="Becoming is a daily affirmation and reflection app for iOS and Android. Personalized affirmations, mindful journaling, and gentle reminders to nurture the person you're growing into." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://craag2.github.io/becoming-website/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Becoming — Daily Affirmation + Reflection App" />
+  <meta property="og:description" content="A daily space to affirm, reflect, and choose who you're becoming. Personalized affirmations and mindful reflection, coming soon to iOS and Android." />
+  <meta property="og:url" content="https://craag2.github.io/becoming-website/" />
+  <meta property="og:site_name" content="Becoming" />
+  <meta property="og:image" content="https://craag2.github.io/becoming-website/assets/images/icon.png" />
+  <meta property="og:image:width" content="512" />
+  <meta property="og:image:height" content="512" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Becoming — Daily Affirmation + Reflection App" />
+  <meta name="twitter:description" content="A daily space to affirm, reflect, and choose who you're becoming." />
+  <meta name="twitter:image" content="https://craag2.github.io/becoming-website/assets/images/icon.png" />
+
+  <!-- Structured Data: Organization + App -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "name": "Becoming",
+        "url": "https://craag2.github.io/becoming-website/",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "email": "eigenpathco@gmail.com",
+          "contactType": "customer support"
+        }
+      },
+      {
+        "@type": "MobileApplication",
+        "name": "Becoming — Affirmation + Reflection",
+        "description": "A daily affirmation and reflection app. Personalized affirmations, journaling, audio recordings, and home screen widgets for iOS and Android.",
+        "applicationCategory": "HealthApplication",
+        "operatingSystem": "iOS, Android",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is the Becoming app?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Becoming is a daily affirmation and reflection app for iOS and Android. It lets you swipe through personalized affirmation cards across categories like self-love, confidence, gratitude, and healing, and pair them with personal reflections. You can also write your own affirmations, record yourself speaking them, and set gentle daily reminders."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is Becoming free?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Becoming is designed to be affordable and accessible. The app will be free to download on iOS and Android. The app is currently in development — register your interest to be notified at launch."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What makes Becoming different from other affirmation apps?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Most affirmation apps stop at showing you a quote. Becoming pairs each affirmation with space for personal reflection, so the words actually land. It's also ad-free, privacy-first (your data stays on your device), and built to be genuinely customisable — from your own affirmations to background images, sounds, and categories."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
   <link rel="icon" href="assets/images/icon.png" type="image/png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -23,7 +102,8 @@
         <a href="#features" class="nav-link">Features</a>
         <a href="#why-becoming" class="nav-link">Why Becoming</a>
         <a href="#affirmations" class="nav-link">Affirmations</a>
-        <a href="#download" class="nav-link nav-link-cta">Register Interest</a>
+        <a href="blog.html" class="nav-link">Blog</a>
+        <a href="#download" class="nav-link nav-link-cta">Join the Waitlist</a>
       </div>
       <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
         <span></span>
@@ -49,7 +129,7 @@
         to nurture the person you're growing into.
       </p>
       <div class="hero-actions">
-        <a href="#download" class="btn btn-primary">Register Your Interest</a>
+        <a href="#download" class="btn btn-primary">Join the Waitlist</a>
         <a href="#features" class="btn btn-secondary">Learn More</a>
       </div>
     </div>
@@ -188,26 +268,21 @@
           </ul>
         </div>
         <div class="personalization-visual" data-reveal>
-          <div class="personalization-palette">
-            <div class="palette-row">
-              <div class="palette-swatch" style="background:#D4DDD4"></div>
-              <div class="palette-swatch" style="background:#D5D1E8"></div>
-              <div class="palette-swatch" style="background:#E8E0D5"></div>
-              <div class="palette-swatch" style="background:#DDD5CC"></div>
+          <div class="cards-stack">
+            <div class="stack-card stack-card-3">
+              <p class="stack-card-text">"I am grateful for how far I've already come."</p>
+              <span class="stack-card-label">Gratitude</span>
             </div>
-            <div class="palette-row">
-              <div class="palette-swatch" style="background:#D0E0D4"></div>
-              <div class="palette-swatch" style="background:#E0DDD8"></div>
-              <div class="palette-swatch" style="background:#E8DDD8"></div>
-              <div class="palette-swatch" style="background:#E5DDD0"></div>
+            <div class="stack-card stack-card-2">
+              <p class="stack-card-text">"I trust myself to handle whatever comes."</p>
+              <span class="stack-card-label">Confidence</span>
             </div>
-          </div>
-          <div class="personalization-card-preview">
-            <div class="preview-card">
-              <p class="preview-card-text">"I love the person I'm becoming."</p>
-              <span class="preview-card-label">Self Love</span>
+            <div class="stack-card stack-card-1">
+              <p class="stack-card-text">"I love the person I'm becoming."</p>
+              <span class="stack-card-label">Self Love</span>
             </div>
           </div>
+          <p class="cards-hint">Tap to shuffle</p>
         </div>
       </div>
     </div>
@@ -294,11 +369,11 @@
       <div class="cta-content" data-reveal>
         <img src="assets/images/icon.png" alt="Becoming" class="cta-logo" />
         <h2 class="cta-title">Be the first to know.</h2>
-        <p class="cta-subtitle">Becoming is coming soon to iOS and Android. Register your interest and we'll let you know the moment it's available.</p>
+        <p class="cta-subtitle">Becoming is coming soon to iOS and Android. Join the waitlist and we'll let you know the moment it's available.</p>
         <div class="cta-buttons">
           <a href="mailto:eigenpathco@gmail.com?subject=I'm%20interested%20in%20Becoming!&body=Hi!%0A%0AI'd%20love%20to%20be%20notified%20when%20Becoming%20is%20available%20on%20the%20App%20Store%20and%20Google%20Play.%0A%0APlease%20keep%20me%20updated!" class="btn btn-primary btn-large">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-            Register Your Interest
+            Join the Waitlist
           </a>
         </div>
       </div>
@@ -319,7 +394,11 @@
             <a href="#features">Features</a>
             <a href="#why-becoming">Why Becoming</a>
             <a href="#affirmations">Affirmations</a>
-            <a href="#download">Register Interest</a>
+            <a href="#download">Join the Waitlist</a>
+          </div>
+          <div class="footer-col">
+            <h4>Learn</h4>
+            <a href="blog.html">Blog</a>
           </div>
           <div class="footer-col">
             <h4>Legal</h4>

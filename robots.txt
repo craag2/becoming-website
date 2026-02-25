@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://craag2.github.io/becoming-website/sitemap.xml
+Sitemap: https://becomingdailyapp.com/sitemap.xml

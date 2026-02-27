@@ -810,6 +810,53 @@ img {
   flex-wrap: wrap;
 }
 
+/* --- Store buttons --- */
+.store-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.8rem 1.625rem;
+  border-radius: 0.875rem;
+  font-family: var(--font-body);
+  font-size: 1.0625rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 0.25s var(--ease-out), box-shadow 0.25s ease;
+  min-width: 190px;
+  line-height: 1;
+}
+
+.store-btn span {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.store-btn small {
+  font-size: 0.6875rem;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  opacity: 0.8;
+}
+
+.store-btn-apple {
+  background: #000;
+  color: #fff;
+}
+
+.store-btn-apple:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.22);
+}
+
+.store-btn-play {
+  background: var(--card);
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  cursor: default;
+  opacity: 0.75;
+}
+
 /* --- Footer --- */
 .footer {
   background: var(--accent);

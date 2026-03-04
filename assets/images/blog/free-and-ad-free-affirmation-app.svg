@@ -1,0 +1,33 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Why a free and ad-free affirmation app matters</title>
+  <desc id="desc">Illustration showing a calm phone interface with no ads and no paywall labels.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="630" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FAF6EF"/>
+      <stop offset="1" stop-color="#F4ECE0"/>
+    </linearGradient>
+    <linearGradient id="phone" x1="360" y1="92" x2="840" y2="540" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#F9F5EF"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="630" rx="32" fill="url(#bg)"/>
+  <circle cx="160" cy="110" r="110" fill="#ECD8C5" opacity="0.4"/>
+  <circle cx="1040" cy="500" r="130" fill="#E3C6AD" opacity="0.4"/>
+
+  <rect x="355" y="85" width="490" height="460" rx="32" fill="url(#phone)" stroke="#DCCDC0" stroke-width="2"/>
+  <rect x="415" y="155" width="370" height="62" rx="14" fill="#F0E4D8"/>
+  <text x="444" y="195" font-family="Lato, Arial, sans-serif" font-size="28" font-weight="700" fill="#654E3E">Free + Ad-Free</text>
+
+  <rect x="415" y="243" width="370" height="72" rx="12" fill="#FFFFFF" stroke="#E6D8CC"/>
+  <text x="438" y="285" font-family="Lato, Arial, sans-serif" font-size="24" fill="#5B493C">No pop-up ads</text>
+
+  <rect x="415" y="335" width="370" height="72" rx="12" fill="#FFFFFF" stroke="#E6D8CC"/>
+  <text x="438" y="377" font-family="Lato, Arial, sans-serif" font-size="24" fill="#5B493C">No paywall before calm</text>
+
+  <rect x="415" y="427" width="370" height="72" rx="12" fill="#FFFFFF" stroke="#E6D8CC"/>
+  <text x="438" y="469" font-family="Lato, Arial, sans-serif" font-size="24" fill="#5B493C">Just your daily practice</text>
+
+  <text x="96" y="565" font-family="Playfair Display, Georgia, serif" font-size="48" font-weight="700" fill="#4D382B">Why Free + Ad-Free Matters</text>
+</svg>

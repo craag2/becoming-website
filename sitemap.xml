@@ -25,8 +25,14 @@
     <priority>0.3</priority>
   </url>
   <url>
+    <loc>https://becomingdailyapp.com/daily-affirmation.html</loc>
+    <lastmod>2026-03-12</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://becomingdailyapp.com/blog.html</loc>
-    <lastmod>2026-03-04</lastmod>
+    <lastmod>2026-03-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -69,6 +75,30 @@
   <url>
     <loc>https://becomingdailyapp.com/blog/how-to-write-affirmations.html</loc>
     <lastmod>2026-02-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://becomingdailyapp.com/blog/affirmations-for-men.html</loc>
+    <lastmod>2026-03-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://becomingdailyapp.com/blog/words-of-affirmation.html</loc>
+    <lastmod>2026-03-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://becomingdailyapp.com/blog/affirmations-for-women.html</loc>
+    <lastmod>2026-03-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://becomingdailyapp.com/blog/why-affirmations-feel-fake.html</loc>
+    <lastmod>2026-03-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>

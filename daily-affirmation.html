@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="/assets/images/icon.png" />
+  <link rel="apple-touch-icon" href="/assets/images/icon.png" />
+
+  <title>Today's Daily Affirmation + Reflection Prompt | Becoming</title>
+  <meta name="description" content="A new affirmation and reflection prompt every day. Read today's affirmation, reflect on it, and share it with someone who needs it." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://becomingdailyapp.com/daily-affirmation.html" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Today's Daily Affirmation + Reflection Prompt | Becoming" />
+  <meta property="og:description" content="A new affirmation and reflection prompt every day. Read it, reflect on it, share it." />
+  <meta property="og:url" content="https://becomingdailyapp.com/daily-affirmation.html" />
+  <meta property="og:site_name" content="Becoming" />
+  <meta property="og:image" content="https://becomingdailyapp.com/assets/images/blog/daily-affirmation.svg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Today's Daily Affirmation + Reflection Prompt" />
+  <meta name="twitter:description" content="A new affirmation and reflection prompt every day from Becoming." />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Daily Affirmation",
+    "description": "A new affirmation and reflection prompt every day.",
+    "url": "https://becomingdailyapp.com/daily-affirmation.html",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Becoming",
+      "url": "https://becomingdailyapp.com/"
+    }
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is a daily affirmation?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A daily affirmation is an intentional positive statement you read or say each day to build healthier self-talk, confidence, and emotional resilience. Pairing it with a reflection prompt helps you connect the words to your real life."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I use today's affirmation?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Read the affirmation once, slowly. Then spend two minutes writing your honest answer to the reflection prompt. That's the whole practice. Share it with someone who needs it if it resonates."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css?v=20260312" />
+
+  <style>
+    /* Daily Affirmation Page Styles */
+    .daily-hero {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: calc(var(--nav-height) + 3rem) var(--container-padding) 1rem;
+      text-align: center;
+    }
+    .daily-hero .post-label {
+      display: inline-block;
+      font-family: var(--font-body);
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 1rem;
+    }
+    .daily-hero h1 {
+      font-family: var(--font-display);
+      font-size: clamp(1.75rem, 4vw, 2.5rem);
+      font-weight: 500;
+      color: var(--text);
+      line-height: 1.25;
+      margin-bottom: 0.75rem;
+    }
+    .daily-hero p {
+      font-family: var(--font-body);
+      font-size: 1.05rem;
+      color: var(--text-light);
+      line-height: 1.6;
+    }
+    .daily-date {
+      font-family: var(--font-body);
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-bottom: 0.5rem;
+    }
+
+    /* Today's Card */
+    .daily-card-wrap {
+      max-width: 640px;
+      margin: 2rem auto 0;
+      padding: 0 var(--container-padding);
+    }
+    .daily-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 1rem;
+      padding: 2.5rem 2rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .daily-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--sage), var(--lavender), var(--blush));
+    }
+    .daily-card-day {
+      font-family: var(--font-body);
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 1.5rem;
+    }
+    .daily-card-affirmation {
+      font-family: var(--font-display);
+      font-size: clamp(1.35rem, 3.5vw, 1.75rem);
+      font-weight: 500;
+      color: var(--text);
+      line-height: 1.4;
+      margin-bottom: 1.5rem;
+    }
+    .daily-card-divider {
+      width: 40px;
+      height: 1px;
+      background: var(--border);
+      margin: 0 auto 1.5rem;
+    }
+    .daily-card-prompt-label {
+      font-family: var(--font-body);
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 0.5rem;
+    }
+    .daily-card-prompt {
+      font-family: var(--font-body);
+      font-size: 1.05rem;
+      color: var(--text-light);
+      line-height: 1.6;
+      font-style: italic;
+    }
+
+    /* Share Section */
+    .daily-share {
+      max-width: 640px;
+      margin: 1.75rem auto 0;
+      padding: 0 var(--container-padding);
+      text-align: center;
+    }
+    .daily-share-label {
+      font-family: var(--font-body);
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 0.75rem;
+    }
+    .daily-share-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+    .daily-share-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.55rem 1rem;
+      border: 1px solid var(--border);
+      border-radius: 2rem;
+      background: var(--card);
+      color: var(--text-light);
+      font-family: var(--font-body);
+      font-size: 0.8rem;
+      font-weight: 400;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      text-decoration: none;
+    }
+    .daily-share-btn:hover {
+      background: var(--bg-alt);
+      color: var(--text);
+      border-color: var(--text-muted);
+    }
+    .daily-share-btn svg {
+      width: 15px;
+      height: 15px;
+      flex-shrink: 0;
+    }
+    .daily-share-btn.copied {
+      background: var(--sage);
+      border-color: var(--sage);
+      color: var(--text);
+    }
+
+    /* CTA */
+    .daily-cta {
+      max-width: 640px;
+      margin: 2.5rem auto 0;
+      padding: 0 var(--container-padding);
+    }
+    .daily-cta-inner {
+      background: var(--bg-alt);
+      border-radius: 1rem;
+      padding: 2rem;
+      text-align: center;
+    }
+    .daily-cta-inner p {
+      font-family: var(--font-body);
+      font-size: 0.95rem;
+      color: var(--text-light);
+      line-height: 1.6;
+      margin-bottom: 1.25rem;
+    }
+
+    /* Past Affirmations Archive */
+    .daily-archive {
+      max-width: 640px;
+      margin: 2rem auto 0;
+      padding: 0 var(--container-padding) 3rem;
+    }
+    .daily-archive h2 {
+      font-family: var(--font-display);
+      font-size: 1.35rem;
+      font-weight: 500;
+      color: var(--text);
+      margin-bottom: 0.5rem;
+    }
+    .daily-archive > p {
+      font-family: var(--font-body);
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-bottom: 1.5rem;
+    }
+    .archive-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+    .archive-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 0.75rem;
+      padding: 1.25rem 1.5rem;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .archive-card:hover {
+      border-color: var(--text-muted);
+    }
+    .archive-card-date {
+      font-family: var(--font-body);
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 0.4rem;
+    }
+    .archive-card-affirmation {
+      font-family: var(--font-display);
+      font-size: 1.05rem;
+      font-weight: 500;
+      color: var(--text);
+      line-height: 1.4;
+      margin-bottom: 0.5rem;
+    }
+    .archive-card-prompt {
+      font-family: var(--font-body);
+      font-size: 0.85rem;
+      color: var(--text-light);
+      font-style: italic;
+      display: none;
+    }
+    .archive-card.expanded .archive-card-prompt {
+      display: block;
+    }
+    .daily-show-more {
+      display: block;
+      margin: 1.25rem auto 0;
+      padding: 0.6rem 1.5rem;
+      border: 1px solid var(--border);
+      border-radius: 2rem;
+      background: var(--card);
+      color: var(--text-light);
+      font-family: var(--font-body);
+      font-size: 0.85rem;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .daily-show-more:hover {
+      background: var(--bg-alt);
+      color: var(--text);
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <img src="assets/images/icon.png" alt="Becoming app logo" class="nav-logo-img" />
+        <span class="nav-logo-text">Becoming</span>
+      </a>
+      <div class="nav-links" id="nav-links">
+        <a href="index.html#features" class="nav-link">Features</a>
+        <a href="index.html#why-becoming" class="nav-link">Why Becoming</a>
+        <a href="daily-affirmation.html" class="nav-link">Daily</a>
+        <a href="blog.html" class="nav-link">Blog</a>
+        <a href="https://apps.apple.com/us/app/becoming-affirm-reflect/id6758968195" target="_blank" rel="noopener noreferrer" class="nav-link nav-link-cta">Download</a>
+      </div>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <header class="daily-hero">
+    <p class="daily-date" id="daily-date"></p>
+    <span class="post-label">Daily Affirmation</span>
+    <h1>Today's Affirmation + Reflection</h1>
+    <p>A new affirmation every day, paired with a reflection prompt to help you go deeper. Read it, sit with it, share it.</p>
+  </header>
+
+  <div class="daily-card-wrap">
+    <div class="daily-card">
+      <p class="daily-card-day" id="daily-card-day"></p>
+      <p class="daily-card-affirmation" id="daily-affirmation"></p>
+      <div class="daily-card-divider"></div>
+      <p class="daily-card-prompt-label">Reflect on this</p>
+      <p class="daily-card-prompt" id="daily-prompt"></p>
+    </div>
+  </div>
+
+  <div class="daily-share">
+    <p class="daily-share-label">Share today's affirmation</p>
+    <div class="daily-share-buttons">
+      <button class="daily-share-btn" id="share-copy" aria-label="Copy to clipboard">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+        <span>Copy</span>
+      </button>
+      <a class="daily-share-btn" id="share-twitter" href="#" target="_blank" rel="noopener noreferrer" aria-label="Share on X">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+        <span>X</span>
+      </a>
+      <a class="daily-share-btn" id="share-whatsapp" href="#" target="_blank" rel="noopener noreferrer" aria-label="Share on WhatsApp">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        <span>WhatsApp</span>
+      </a>
+      <button class="daily-share-btn" id="share-native" aria-label="Share" style="display:none;">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+        <span>Share</span>
+      </button>
+    </div>
+  </div>
+
+  <div class="daily-cta">
+    <div class="daily-cta-inner">
+      <p>Want this as a daily practice? Becoming gives you an affirmation + reflection prompt every morning, with space to write your response.</p>
+      <a href="https://apps.apple.com/us/app/becoming-affirm-reflect/id6758968195" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+        Download on the App Store
+      </a>
+    </div>
+  </div>
+
+  <div class="daily-archive">
+    <h2>Past Affirmations</h2>
+    <p>Browse the last 7 days of affirmations.</p>
+    <div class="archive-list" id="archive-list"></div>
+    <button class="daily-show-more" id="show-more-btn">Show more</button>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <img src="assets/images/icon.png" alt="Becoming" class="footer-logo" />
+          <p class="footer-tagline">A daily space to affirm, reflect, and choose who you're becoming.</p>
+        </div>
+        <div class="footer-links-group">
+          <div class="footer-col">
+            <h4>Product</h4>
+            <a href="index.html#features">Features</a>
+            <a href="index.html#why-becoming">Why Becoming</a>
+            <a href="index.html#affirmations">Affirmations</a>
+            <a href="https://apps.apple.com/us/app/becoming-affirm-reflect/id6758968195" target="_blank" rel="noopener noreferrer">Download on iOS</a>
+          </div>
+          <div class="footer-col">
+            <h4>Learn</h4>
+            <a href="blog.html">Blog</a>
+          </div>
+          <div class="footer-col">
+            <h4>Legal</h4>
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="support.html">Support</a>
+          </div>
+          <div class="footer-col">
+            <h4>Contact</h4>
+            <a href="mailto:support@becomingdailyapp.com">support@becomingdailyapp.com</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Becoming. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+  (function() {
+    // 365 affirmations + reflection prompts — one for each day of the year
+    const affirmations = [
+      { a: "I am worthy of the good things happening in my life.", r: "What good thing have I been dismissing or downplaying lately?" },
+      { a: "I choose progress over perfection today.", r: "What imperfect action can I take right now that moves me forward?" },
+      { a: "My feelings are valid and I give myself permission to feel them.", r: "What emotion have I been trying to rush past instead of sitting with?" },
+      { a: "I am resilient, and I have proven this before.", r: "What difficult moment did I navigate that I rarely give myself credit for?" },
+      { a: "I release what I cannot control and focus on what I can.", r: "What am I holding onto right now that isn't mine to carry?" },
+      { a: "I trust myself to make the right decisions for my life.", r: "What recent decision am I second-guessing that was actually the right call?" },
+      { a: "I deserve rest without needing to earn it.", r: "What belief makes me feel like I have to be productive to be worthy?" },
+      { a: "I am becoming someone I am proud of.", r: "What's one way I've grown this year that my past self would appreciate?" },
+      { a: "My voice matters and deserves to be heard.", r: "What have I been wanting to say but holding back?" },
+      { a: "I can hold both gratitude and grief at the same time.", r: "What mixed feeling do I need to make room for today?" },
+      { a: "I am enough, exactly as I am right now.", r: "What condition am I putting on my own worthiness?" },
+      { a: "I choose to respond rather than react.", r: "What situation recently triggered a reaction I wish I'd handled differently?" },
+      { a: "I am allowed to set boundaries that protect my peace.", r: "Where is a boundary overdue in my life?" },
+      { a: "My past does not define my future.", r: "What old story about myself no longer fits who I'm becoming?" },
+      { a: "I treat myself with the same kindness I offer others.", r: "What would I say to a friend in my exact situation right now?" },
+      { a: "I am learning, and that is enough.", r: "What mistake taught me something I couldn't have learned any other way?" },
+      { a: "I celebrate my small wins.", r: "What did I do well today that I usually overlook?" },
+      { a: "I am allowed to change my mind.", r: "Where would changing my mind be an act of self-respect?" },
+      { a: "I give myself permission to grow at my own pace.", r: "What timeline am I pressuring myself to meet that isn't actually mine?" },
+      { a: "I am more than my worst moments.", r: "What moment am I still punishing myself for that I can release?" },
+      { a: "I trust that I can handle what comes next.", r: "What future worry can I meet with one grounded step today?" },
+      { a: "I am proud of how far I've come.", r: "Which past version of me would be proud of where I am now?" },
+      { a: "I deserve relationships that feel safe and reciprocal.", r: "Which relationship in my life currently feels one-sided?" },
+      { a: "My energy is precious and I spend it intentionally.", r: "What drains me repeatedly that I keep tolerating?" },
+      { a: "I forgive myself for not knowing then what I know now.", r: "What old decision can I finally stop replaying?" },
+      { a: "I can be a work in progress and still be worthy of love.", r: "Where do I confuse self-improvement with self-rejection?" },
+      { a: "I am capable of creating the life I want.", r: "What one thing can I do today that my future self will thank me for?" },
+      { a: "I release comparison and return to my own path.", r: "Who am I comparing myself to, and what would I see if I stopped?" },
+      { a: "I honor my needs without guilt.", r: "Which need have I been minimizing because I think it's selfish?" },
+      { a: "I am gentle with myself while I heal.", r: "What would gentleness look like for me today specifically?" },
+      { a: "I belong in the rooms I walk into.", r: "What situation triggers impostor feelings, and what evidence says otherwise?" },
+      { a: "My worth is not determined by my productivity.", r: "If I did nothing today, would I still feel valuable? Why or why not?" },
+      { a: "I can feel fear and still move forward.", r: "What's one small brave thing I can do today?" },
+      { a: "I choose thoughts that support my wellbeing.", r: "Which recurring thought is draining me most right now?" },
+      { a: "I am allowed to outgrow things that once fit.", r: "What relationship, habit, or belief have I outgrown but not released?" },
+      { a: "I am not responsible for other people's reactions to my honesty.", r: "What truth am I softening because I'm afraid of someone's response?" },
+      { a: "I can ask for help and still be strong.", r: "What support would make this week easier if I asked for it?" },
+      { a: "I am defined by my values, not outside approval.", r: "Which value do I want my choices to reflect this week?" },
+      { a: "I release shame and choose responsibility.", r: "What can I repair without attacking myself in the process?" },
+      { a: "I am patient with my own evolution.", r: "What part of my growth am I trying to rush?" },
+      { a: "I deserve to feel emotionally safe.", r: "What makes me feel safest in connection with others?" },
+      { a: "I accept myself in this moment, fully.", r: "What am I resisting about myself today?" },
+      { a: "I am learning to trust my intuition.", r: "When did my gut feeling turn out to be right recently?" },
+      { a: "My body deserves respect and care.", r: "How can I show my body appreciation today?" },
+      { a: "I let go of who I had to be to survive.", r: "Which old coping pattern no longer serves the life I'm building?" },
+      { a: "I speak to myself with the voice I'd use for someone I love.", r: "What did my inner voice sound like today — kind or critical?" },
+      { a: "I am building something meaningful, even when progress is slow.", r: "What behind-the-scenes effort am I making that nobody sees?" },
+      { a: "I can disappoint others without abandoning myself.", r: "What am I saying yes to out of fear of disapproval?" },
+      { a: "I am worthy of joy, not just productivity.", r: "What brings me joy that has no achievement attached to it?" },
+      { a: "I release the need to prove my worth.", r: "How do I overperform to feel valuable, and what would happen if I stopped?" },
+      { a: "I can hold high standards without being cruel to myself.", r: "Where does my self-discipline cross the line into self-punishment?" },
+      { a: "I choose integrity over convenience.", r: "When was the last time I took the harder right over the easier wrong?" },
+      { a: "I am not too much. I am exactly enough.", r: "When was I last told or felt I was 'too much'? Was that really about me?" },
+      { a: "My sensitivity is a strength, not a flaw.", r: "When did my emotional depth help me understand something others missed?" },
+      { a: "I protect my energy the same way I protect the people I love.", r: "What commitment am I keeping out of obligation rather than alignment?" },
+      { a: "I am allowed to take up space.", r: "When did I shrink myself this week, and what was I afraid of?" },
+      { a: "I invest in myself because I'm worth the investment.", r: "What area of my life would benefit from more intentional attention?" },
+      { a: "I can be kind and still have boundaries.", r: "Where do I confuse kindness with over-extending?" },
+      { a: "I release the stories that limit me.", r: "What narrative have I been repeating that holds me back?" },
+      { a: "I am proud of my emotional growth.", r: "How do I respond differently now than I used to?" },
+      { a: "I deserve consistency from myself and others.", r: "Where do I tolerate inconsistency that quietly hurts me?" },
+      { a: "I am learning from every season of my life.", r: "What is this current season trying to teach me?" },
+      { a: "I can rewrite the stories that limit me.", r: "Which belief about myself would I rewrite if I could?" },
+      { a: "I show up for myself the way I show up for others.", r: "What promise would I keep for a friend that I break for myself?" },
+      { a: "My peace is more important than proving a point.", r: "What argument or situation can I release today for the sake of my calm?" },
+      { a: "I am allowed to feel good about my life.", r: "What guilt creeps in when things are going well, and where does it come from?" },
+      { a: "I trust the timing of my life.", r: "What am I impatient about that might simply need more time?" },
+      { a: "I am not my anxiety. I am the person observing it.", r: "What anxious thought can I notice without attaching to it today?" },
+      { a: "I deserve a life that feels aligned, not just impressive.", r: "Where does my life feel performative instead of true?" },
+      { a: "I am allowed to protect my energy.", r: "What drains me repeatedly, and what boundary would help?" },
+      { a: "I choose to focus on what I can influence today.", r: "What three things are within my control this morning?" },
+      { a: "I can hold space for my own pain.", r: "What hurt am I carrying that I haven't given myself permission to feel?" },
+      { a: "I am someone worth knowing.", r: "What quality about myself would a close friend describe if asked?" },
+      { a: "I release self-criticism and choose self-respect.", r: "What is one respectful promise I can keep to myself today?" },
+      { a: "I am doing the best I can with what I have.", r: "What unrealistic expectation am I holding myself to right now?" },
+      { a: "I can trust my boundaries and my softness.", r: "How can I be open without overextending today?" },
+      { a: "I am worthy of the love I keep giving away.", r: "Where can I redirect some of my care back to myself?" },
+      { a: "I am already whole, and still unfolding.", r: "What part of me needs appreciation right now, before improvement?" },
+      { a: "I can be ambitious and still enjoy today.", r: "What small pleasure am I postponing until I've 'earned' it?" },
+      { a: "I don't need to have all the answers to take the next step.", r: "What action can I take today even though I don't know the full path?" },
+      { a: "I am learning to be comfortable with discomfort.", r: "What uncomfortable situation am I growing through right now?" },
+      { a: "My mistakes do not erase my value.", r: "What recent mistake am I still carrying that I can put down?" },
+      { a: "I bring something unique to every room I enter.", r: "What perspective or quality do I offer that others genuinely appreciate?" },
+      { a: "I am allowed to celebrate myself without waiting for others to.", r: "What win can I acknowledge about myself today, right now?" },
+      { a: "I choose connection over perfection.", r: "Where am I prioritizing getting it right over being real?" },
+      { a: "My journey is my own and it doesn't need to look like anyone else's.", r: "Whose timeline am I unconsciously measuring mine against?" },
+      { a: "I am building habits that serve the person I want to become.", r: "Which daily habit is most aligned with my future self?" },
+      { a: "I release the need for everyone to understand my path.", r: "Whose understanding am I waiting for before I trust my own decisions?" },
+      { a: "I can rest and still be moving forward.", r: "What does productive rest look like for me today?" },
+      { a: "I am not behind. I am exactly where my journey needs me to be.", r: "What milestone am I comparing myself to that was never mine to chase?" },
+      { a: "I honor my pace.", r: "What am I pressuring myself to rush, and what would happen if I slowed down?" },
+      { a: "I am capable of deep, meaningful connection.", r: "Which relationship deserves more of my genuine attention right now?" },
+      { a: "I choose to move toward what lights me up.", r: "What activity or pursuit makes me lose track of time in the best way?" },
+      { a: "I am safe to be fully myself.", r: "Where do I hold back parts of myself, and who am I performing for?" },
+      { a: "I can be grateful and still want more.", r: "What do I want that I've been afraid to admit because it might seem ungrateful?" },
+      { a: "My inner critic does not have the final word.", r: "What harsh thing did my inner critic say today, and what's the kinder truth?" },
+      { a: "I am resilient because of what I've been through, not in spite of it.", r: "What difficult experience gave me a strength I now rely on?" },
+      { a: "I deserve to be seen, heard, and valued.", r: "In which relationship do I feel most invisible, and what would change look like?" },
+      { a: "I can let go of what was and make room for what's next.", r: "What am I clinging to from the past that's blocking something new?" },
+      { a: "I am the author of my own story.", r: "If I were writing the next chapter of my life, what would happen?" },
+      { a: "I can be strong and still need support.", r: "Who in my life can I lean on that I've been trying to handle alone?" },
+      { a: "I am grateful for the lessons hidden in my struggles.", r: "What recent struggle taught me something I wouldn't trade?" },
+      { a: "I choose peace over proving I'm right.", r: "What argument can I let go of today that doesn't serve my peace?" },
+      { a: "I trust that the right things are making their way to me.", r: "What am I trying to force that might come more naturally if I let it?" },
+      { a: "I am worthy of the dreams I carry.", r: "Which dream have I been too afraid to speak out loud?" },
+      { a: "I can start again at any time. There is no deadline on becoming.", r: "What would I start fresh today if I believed it wasn't too late?" },
+      { a: "I give myself grace on the days that are hard.", r: "What would grace look like for me on a difficult day like today?" },
+      { a: "My presence matters to the people around me.", r: "Who would notice if I wasn't there, and when did I last tell them they matter too?" },
+      { a: "I am more than what happened to me.", r: "What part of my identity exists completely separate from my hardest moments?" },
+      { a: "I choose curiosity over judgment — for myself and others.", r: "What situation can I approach with curiosity instead of criticism today?" },
+      { a: "I am planting seeds today that will bloom when the time is right.", r: "What effort am I making now that won't show results immediately but matters anyway?" },
+      { a: "I have everything I need to take the next step.", r: "What step have I been postponing because I feel like I need more first?" },
+      { a: "I am the kind of person who keeps going.", r: "What moment in my life proved that I don't give up easily?" },
+      { a: "I can love the life I have while building the life I want.", r: "What part of my current life brings me genuine contentment?" },
+      { a: "I stand by my values, even when it's uncomfortable.", r: "What value did I honor recently, even when it would have been easier not to?" },
+      { a: "I am allowed to change without owing anyone an explanation.", r: "What change am I making that I keep over-explaining to others?" },
+      { a: "My capacity for empathy is a superpower.", r: "When did understanding someone else's perspective change the outcome of a situation?" },
+      { a: "I am committed to my own healing.", r: "What healing work am I most proud of, even if nobody else sees it?" },
+      { a: "I don't have to carry the weight of the world. I just have to carry my part.", r: "What weight am I carrying that was never mine to hold?" },
+      { a: "I am at peace with who I was. I am excited about who I'm becoming.", r: "What's the biggest difference between who I was a year ago and who I am today?" },
+      { a: "I can be imperfect and still be deeply loved.", r: "What imperfection am I hiding that the people who love me probably already see?" },
+      { a: "My self-care is not negotiable.", r: "What non-negotiable act of self-care can I commit to this week?" },
+      { a: "I radiate the energy I want to receive.", r: "What energy am I putting out today, and is it what I want to get back?" },
+      { a: "I am free to create my own definition of success.", r: "If nobody else could see my life, what would success look like to me?" },
+      { a: "I honor the courage it takes to be vulnerable.", r: "When was the last time I let someone see the real me, and what happened?" },
+      { a: "I am exactly where I need to be to learn what I need to learn.", r: "What is this moment trying to teach me if I stop resisting it?" },
+      { a: "I release perfectionism and embrace authenticity.", r: "Where is perfectionism currently blocking me from starting or sharing?" },
+      { a: "I am a good person doing my best in an imperfect world.", r: "What evidence from today proves that I'm trying?" },
+      { a: "I choose to nourish what makes me come alive.", r: "What have I stopped doing that used to light me up, and can I bring it back?" },
+      { a: "I am open to receiving good things without guilt.", r: "When something good happens to me, do I fully accept it or immediately look for a catch?" },
+      { a: "My story is not over. The best chapters might be ahead.", r: "What chapter of my life am I in right now, and what do I want the next one to be about?" },
+      { a: "I have the power to create calm in the middle of chaos.", r: "What's one thing I can do in the next five minutes to create a moment of peace?" },
+      { a: "I am someone I would want to be friends with.", r: "What quality about myself would make someone glad to know me?" },
+      { a: "I can hold space for uncertainty without falling apart.", r: "What unknown am I sitting with right now, and how am I managing it?" },
+      { a: "I deserve to be understood, and I also deserve to understand myself.", r: "What about myself confuses me most, and how can I explore it?" },
+      { a: "I lead with love, even when it's hard.", r: "Where can I bring more love into a situation that feels heavy?" },
+      { a: "I am grateful for today and all it holds.", r: "What three things am I genuinely grateful for right now?" },
+      { a: "I am learning to let good enough be good enough.", r: "What am I over-polishing that's already done?" },
+      { a: "I choose hope over fear, even when fear is louder.", r: "What hopeful thought can I hold onto today when fear starts speaking?" },
+      { a: "I am not defined by what I lack. I am defined by what I give.", r: "What did I give someone recently — time, attention, care — that mattered?" },
+      { a: "I am still here, and that is something to be proud of.", r: "What challenge did I survive that I rarely pause to acknowledge?" },
+      { a: "I welcome the new version of me that's emerging.", r: "What part of me is changing right now that I can choose to embrace instead of fear?" },
+      { a: "I have the courage to begin again whenever I need to.", r: "What fresh start would serve me well today, even a small one?" },
+      { a: "I am rooted in my values, and that is my compass.", r: "What value guided my most recent important decision?" },
+      { a: "I give myself credit for showing up, even on the hard days.", r: "What did I show up for recently when everything in me wanted to stay in bed?" },
+      { a: "I can grow without being in crisis. Growth can be gentle.", r: "What gentle shift am I making that doesn't require a breakdown to motivate it?" },
+      { a: "I am building a life that reflects who I truly am.", r: "What part of my daily life feels most authentically me?" },
+      { a: "I am allowed to take things one day at a time.", r: "What overwhelming thing can I break into just today's piece?" },
+      { a: "I trust the process, even when I can't see the results yet.", r: "What effort am I sustaining on faith alone, and why is it worth it?" },
+      { a: "I replace self-doubt with self-discovery.", r: "What new thing did I learn about myself recently?" },
+      { a: "I am strong in ways that aren't always visible.", r: "What inner strength have I relied on that nobody else knows about?" },
+      { a: "I am worthy of tenderness, especially from myself.", r: "How would I treat myself differently if I believed I deserved tenderness?" },
+      { a: "I can say no to what depletes me and yes to what fulfills me.", r: "What's one no and one yes I can commit to this week?" },
+      { a: "I am brave enough to be imperfect in front of others.", r: "Where am I pretending to have it together when I could just be honest?" },
+      { a: "I am not in competition with anyone. My only competition is who I was yesterday.", r: "In what specific way am I better today than I was last month?" },
+      { a: "I choose self-compassion over self-judgment.", r: "What thought about myself would I rephrase if I heard a friend say it about themselves?" },
+      { a: "My life has meaning, even in the ordinary moments.", r: "What ordinary moment recently held more beauty than I realized at the time?" },
+      { a: "I am the calm I seek.", r: "What practice or habit brings me closest to feeling centered?" },
+      { a: "I can be disappointed and still move forward.", r: "What disappointment can I acknowledge without letting it stop me?" },
+      { a: "I choose to be present in this moment rather than lost in the next one.", r: "What am I missing right now because I'm worried about what's coming?" },
+      { a: "I trust that good things are on their way to me.", r: "What good thing arrived in my life that I didn't expect?" },
+      { a: "I am allowed to enjoy my own company.", r: "What do I love doing when I'm completely alone?" },
+      { a: "I replace 'I have to' with 'I get to.'", r: "What obligation can I reframe as an opportunity today?" },
+      { a: "I am more than the roles I play.", r: "Who am I when nobody needs anything from me?" },
+      { a: "I am worthy of my own attention.", r: "When was the last time I checked in with myself the way I check in with others?" },
+      { a: "I embrace uncertainty as the birthplace of possibility.", r: "What unknown in my life could turn out to be the best thing that ever happened?" },
+      { a: "I am writing a story worth telling.", r: "What moment from this week would I include if I were writing my memoir?" },
+      { a: "I can want things and still be at peace.", r: "What desire can I hold without letting it become desperation?" },
+      { a: "I am surrounded by more love than I sometimes see.", r: "Who showed me love recently in a way I might have overlooked?" },
+      { a: "I choose growth, even when it's uncomfortable.", r: "What uncomfortable truth am I sitting with that's actually making me stronger?" },
+      { a: "I am safe to feel everything I need to feel.", r: "What emotion would I let myself fully experience if I knew it would pass?" },
+      { a: "I bring warmth to the spaces I enter.", r: "How did I make someone feel welcome or valued recently?" },
+      { a: "I am a source of light, even when I forget.", r: "Who in my life would say I brightened their day, and when?" },
+      { a: "I choose to see challenges as invitations to grow.", r: "What current challenge is secretly preparing me for something better?" },
+      { a: "I am enough, and tomorrow I will be enough too.", r: "What will I carry into tomorrow that I can be at peace with tonight?" },
+      { a: "I don't need a perfect day to have a meaningful one.", r: "What made today meaningful even if it wasn't perfect?" },
+      { a: "I honor the wisdom I've gained from my experiences.", r: "What piece of hard-won wisdom am I most grateful for?" },
+      { a: "I am open to surprise and delight.", r: "When was the last time something unexpectedly good happened, and did I savor it?" },
+      { a: "I release the need to control every outcome.", r: "What outcome am I white-knuckling that I could loosen my grip on?" },
+      { a: "I am worthy of spaces that feel like home.", r: "Where do I feel most at home, and what makes that space different?" },
+      { a: "I can hold complexity without needing to resolve it immediately.", r: "What complicated situation can I simply sit with today instead of trying to fix?" },
+      { a: "I greet myself with the same enthusiasm I greet others.", r: "How do I greet myself in the morning — with dread, or with welcome?" },
+      { a: "I am permission to start fresh right now, in this very moment.", r: "What would I do differently in the next hour if I gave myself a clean slate?" },
+      { a: "My softness is not a weakness. It is how I connect.", r: "When did my softness open a door that toughness would have kept closed?" },
+      { a: "I am at peace with taking things slowly.", r: "What would happen if I simply slowed down today instead of rushing?" },
+      { a: "I honor my body for carrying me through everything.", r: "What has my body endured that I haven't thanked it for?" },
+      { a: "I am allowed to shine without dimming myself for others.", r: "Where have I been dimming my light to make someone else comfortable?" },
+      { a: "I choose depth over distraction.", r: "What am I distracting myself from that deserves my attention?" },
+      { a: "I am worthy of the effort it takes to know me.", r: "What would someone discover about me if they looked past the surface?" },
+      { a: "I can carry hope and heaviness at the same time.", r: "What am I hopeful about even in the midst of something hard?" },
+      { a: "I am enough proof that I am enough.", r: "If I listed everything I've survived, overcome, and created — would I be convinced?" }
+    ];
+
+    // Get day of year (0-indexed)
+    function getDayOfYear(date) {
+      const start = new Date(date.getFullYear(), 0, 0);
+      const diff = date - start;
+      const oneDay = 1000 * 60 * 60 * 24;
+      return Math.floor(diff / oneDay) - 1;
+    }
+
+    function getAffirmationForDate(date) {
+      const dayOfYear = getDayOfYear(date);
+      return affirmations[dayOfYear % affirmations.length];
+    }
+
+    function formatDate(date) {
+      return date.toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
+    }
+
+    function formatShortDate(date) {
+      return date.toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric' });
+    }
+
+    // Render today's affirmation
+    const today = new Date();
+    const todayAff = getAffirmationForDate(today);
+    const dayOfYear = getDayOfYear(today);
+
+    document.getElementById('daily-date').textContent = formatDate(today);
+    document.getElementById('daily-card-day').textContent = 'Day ' + (dayOfYear + 1) + ' of 365';
+    document.getElementById('daily-affirmation').textContent = todayAff.a;
+    document.getElementById('daily-prompt').textContent = todayAff.r;
+
+    // Share functionality
+    const shareText = todayAff.a + '\n\nReflect: ' + todayAff.r + '\n\n— from Becoming (becomingdailyapp.com/daily-affirmation)';
+    const shareUrl = 'https://becomingdailyapp.com/daily-affirmation.html';
+
+    // Copy button
+    document.getElementById('share-copy').addEventListener('click', function() {
+      navigator.clipboard.writeText(shareText).then(() => {
+        const btn = this;
+        btn.classList.add('copied');
+        btn.querySelector('span').textContent = 'Copied!';
+        setTimeout(() => {
+          btn.classList.remove('copied');
+          btn.querySelector('span').textContent = 'Copy';
+        }, 2000);
+      });
+    });
+
+    // Twitter/X
+    document.getElementById('share-twitter').href =
+      'https://twitter.com/intent/tweet?text=' + encodeURIComponent(todayAff.a + ' ✨\n\n— @becoming_app') + '&url=' + encodeURIComponent(shareUrl);
+
+    // WhatsApp
+    document.getElementById('share-whatsapp').href =
+      'https://wa.me/?text=' + encodeURIComponent(shareText);
+
+    // Native Share API
+    if (navigator.share) {
+      const nativeBtn = document.getElementById('share-native');
+      nativeBtn.style.display = 'inline-flex';
+      nativeBtn.addEventListener('click', function() {
+        navigator.share({
+          title: "Today's Affirmation from Becoming",
+          text: shareText,
+          url: shareUrl
+        }).catch(() => {});
+      });
+    }
+
+    // Past affirmations archive
+    let archiveDays = 7;
+    function renderArchive() {
+      const list = document.getElementById('archive-list');
+      list.innerHTML = '';
+      for (let i = 1; i <= archiveDays; i++) {
+        const pastDate = new Date(today);
+        pastDate.setDate(pastDate.getDate() - i);
+        const aff = getAffirmationForDate(pastDate);
+
+        const card = document.createElement('div');
+        card.className = 'archive-card';
+        card.innerHTML =
+          '<p class="archive-card-date">' + formatShortDate(pastDate) + '</p>' +
+          '<p class="archive-card-affirmation">' + aff.a + '</p>' +
+          '<p class="archive-card-prompt">' + aff.r + '</p>';
+        card.addEventListener('click', function() {
+          this.classList.toggle('expanded');
+        });
+        list.appendChild(card);
+      }
+    }
+    renderArchive();
+
+    document.getElementById('show-more-btn').addEventListener('click', function() {
+      archiveDays += 7;
+      if (archiveDays >= 30) {
+        this.style.display = 'none';
+      }
+      renderArchive();
+    });
+
+  })();
+  </script>
+</body>
+</html>

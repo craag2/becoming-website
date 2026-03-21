@@ -32,7 +32,7 @@
   </url>
   <url>
     <loc>https://becomingdailyapp.com/blog.html</loc>
-    <lastmod>2026-03-12</lastmod>
+    <lastmod>2026-03-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -99,6 +99,24 @@
   <url>
     <loc>https://becomingdailyapp.com/blog/why-affirmations-feel-fake.html</loc>
     <lastmod>2026-03-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://becomingdailyapp.com/blog/best-affirmation-apps-2026.html</loc>
+    <lastmod>2026-03-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://becomingdailyapp.com/blog/affirmations-for-confidence.html</loc>
+    <lastmod>2026-03-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://becomingdailyapp.com/blog/affirmation-journaling-guide.html</loc>
+    <lastmod>2026-03-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
